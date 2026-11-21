@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CodeForge — разработка программного обеспечения</title>
+<style>
+:root{
+  --bg:#ffffff; --surface:#f4f6fb; --text:#12151f; --muted:#5a6275;
+  --accent:#3b5bfd; --accent-text:#ffffff; --border:#e0e4ee;
+  color-scheme: light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e111a; --surface:#161b28; --text:#eef0f6; --muted:#9aa3b8;
+    --accent:#7c93ff; --accent-text:#0e111a; --border:#262d40;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e111a; --surface:#161b28; --text:#eef0f6; --muted:#9aa3b8;
+  --accent:#7c93ff; --accent-text:#0e111a; --border:#262d40;
+  color-scheme: dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:.95rem}
+nav a:hover{color:var(--text)}
+.hero{padding:80px 0 72px}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin:0 0 18px;letter-spacing:-.03em;max-width:18ch}
+.hero p{color:var(--muted);font-size:1.15rem;max-width:56ch;margin:0 0 28px}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-text);padding:13px 26px;
+  border-radius:10px;text-decoration:none;font-weight:600}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--border);margin-left:10px}
+section{padding:64px 0}
+section.alt{background:var(--surface)}
+h2{font-size:1.8rem;margin:0 0 8px;letter-spacing:-.02em}
+.lead{color:var(--muted);margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:22px}
+.alt .card{background:var(--bg)}
+.card .ico{font-size:1.6rem;margin-bottom:10px}
+.card h3{margin:0 0 6px;font-size:1.1rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:18px;text-align:center}
+.stats b{display:block;font-size:2rem;color:var(--accent)}
+.stats span{color:var(--muted);font-size:.9rem}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:.9rem;background:var(--bg)}
+.contact{text-align:center}
+.contact p{color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted);font-size:.9rem;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="logo">Code<span>Forge</span></div>
+    <nav>
+      <a href="#services">Услуги</a>
+      <a href="#about">О нас</a>
+      <a href="#stack">Технологии</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>Разрабатываем программы, которые работают на ваш бизнес</h1>
+    <p>Сайты, мобильные приложения, чат-боты и внутренние системы под ключ: от идеи и дизайна до запуска и поддержки.</p>
+    <a class="btn" href="#contact">Обсудить проект</a>
+    <a class="btn ghost" href="#services">Наши услуги</a>
+  </div>
+
+  <section id="services" class="alt">
+    <div class="wrap">
+      <h2>Услуги</h2>
+      <p class="lead">Берёмся за проекты любого масштаба — от лендинга до сложной платформы.</p>
+      <div class="grid">
+        <div class="card"><div class="ico">🌐</div><h3>Веб-разработка</h3><p>Сайты, интернет-магазины и веб-сервисы с современным дизайном.</p></div>
+        <div class="card"><div class="ico">📱</div><h3>Мобильные приложения</h3><p>Приложения для iOS и Android, быстрые и удобные.</p></div>
+        <div class="card"><div class="ico">🤖</div><h3>Чат-боты</h3><p>Боты для Telegram и других платформ: продажи, поддержка, уведомления.</p></div>
+        <div class="card"><div class="ico">⚙️</div><h3>Автоматизация</h3><p>Интеграции, CRM и внутренние системы, которые экономят время команды.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>О нас</h2>
+      <p class="lead">Небольшая команда разработчиков, которая отвечает за результат, а не просто за код.</p>
+      <div class="stats">
+        <div><b>50+</b><span>завершённых проектов</span></div>
+        <div><b>7 лет</b><span>на рынке</span></div>
+        <div><b>100%</b><span>прозрачная отчётность</span></div>
+        <div><b>24/7</b><span>поддержка после запуска</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stack" class="alt">
+    <div class="wrap">
+      <h2>Технологии</h2>
+      <p class="lead">Используем проверенные инструменты и подбираем стек под задачу.</p>
+      <div class="tags">
+        <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>React</span>
+        <span>Node.js</span><span>Django</span><span>PostgreSQL</span><span>Docker</span>
+        <span>Flutter</span><span>Telegram API</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <h2>Расскажите о вашем проекте</h2>
+      <p>Ответим в течение рабочего дня и предложим решение с оценкой сроков и стоимости.</p>
+      <a class="btn" href="mailto:hello@codeforge.example">hello@codeforge.example</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 CodeForge. Все права защищены.</div>
+</footer>
+</body>
+</html>
